@@ -1,0 +1,8 @@
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /Servicios_Web/
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
