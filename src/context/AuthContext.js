@@ -7,6 +7,13 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    setUser(null);
+    setIsAuthenticated(false);
+  };
+
   useEffect(() => {
     // Verificar si hay un token guardado
     const token = localStorage.getItem('token');
@@ -120,13 +127,6 @@ export const AuthProvider = ({ children }) => {
       console.error('Register error:', error);
       return { success: false, error: error.message || 'Error de conexión con el servidor. Verifica que Apache y MySQL están corriendo.' };
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    setUser(null);
-    setIsAuthenticated(false);
   };
 
   const value = {

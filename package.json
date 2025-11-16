@@ -4,18 +4,18 @@
   "description": "BuildBox - Sistema de Gestión de Obras con React.js",
   "main": "src/index.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "@fortawesome/fontawesome-free": "^6.0.0"
+    "styled-components": "^5.3.6"
   },
   "browserslist": {
     "production": [
@@ -37,5 +37,8 @@
     "frontend"
   ],
   "author": "BuildBox Team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
 }

@@ -9,9 +9,9 @@ DELETE FROM usuarios;
 -- Insertar usuarios de prueba
 -- Contraseña para todos: 'password'
 INSERT INTO usuarios (nombre_usuario, email, password, rol) VALUES
-('admin', 'admin@buildxpro.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'administrador'),
-('usuario1', 'usuario1@buildxpro.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'usuario'),
-('gerente', 'gerente@buildxpro.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gerente');
+('admin', 'admin@buildxpro.com', 'password123*', 'administrador'),
+('usuario1', 'usuario1@buildxpro.com', 'password234*', 'usuario'),
+('gerente', 'gerente@buildxpro.com', 'password345*', 'gerente');
 
 -- Mostrar usuarios creados
 SELECT id, nombre_usuario, email, rol, activo FROM usuarios;

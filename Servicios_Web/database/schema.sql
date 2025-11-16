@@ -103,4 +103,4 @@ INSERT INTO reportes (id, nombre, tipo, fecha) VALUES
 ('report-2', 'Reporte de Recursos - Enero 2024', 'mensual', '2024-01-01');
 
 INSERT INTO usuarios (nombre_usuario, email, password, rol) VALUES
-('admin', 'admin@buildxpro.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'administrador');
+('admin', 'admin@buildxpro.com', 'password123*', 'administrador');

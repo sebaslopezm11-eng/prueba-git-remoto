@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Auth.css';
 
-const Register = ({ onBack }) => {
+const Register = () => {
   const [formData, setFormData] = useState({
     nombre_usuario: '',
     email: '',
@@ -154,7 +154,7 @@ const Register = ({ onBack }) => {
 
         <div className="auth-toggle">
           <span>¿Ya tienes cuenta? </span>
-          <button type="button" onClick={onBack}>
+          <button type="button" onClick={() => navigate('/login')}>
             Inicia sesión aquí
           </button>
         </div>

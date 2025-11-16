@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Auth.css';
 
-const Login = ({ onShowRegister }) => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -74,14 +74,12 @@ const Login = ({ onShowRegister }) => {
           </button>
         </form>
 
-        {onShowRegister && (
-          <div className="auth-toggle">
-            <span>¿No tienes cuenta? </span>
-            <button type="button" onClick={onShowRegister}>
-              Regístrate aquí
-            </button>
-          </div>
-        )}
+        <div className="auth-toggle">
+          <span>¿No tienes cuenta? </span>
+          <button type="button" onClick={() => navigate('/register')}>
+            Regístrate aquí
+          </button>
+        </div>
 
         <div className="auth-footer">
           <p>Usuario de prueba: <strong>admin</strong> / Contraseña: <strong>password</strong></p>
